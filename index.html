@@ -178,8 +178,8 @@
 
         // Récupérer les données basées sur les options choisies
         const monthlyPayment = data[months][insurance];
-        const sessionsNeededPerMonth = Math.ceil(monthlyPayment / sessionPrice); // Arrondir au nombre entier le plus proche supérieur
-        const totalSessions = sessionsNeededPerMonth * months;
+        const sessionsNeededPerMonth = (monthlyPayment / sessionPrice).toFixed(2);
+        const totalSessions = (sessionsNeededPerMonth * months).toFixed(2);
 
         // Afficher les résultats
         document.getElementById('result').innerHTML = `
